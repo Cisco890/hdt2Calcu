@@ -13,6 +13,10 @@ public class CustomStack<T> {
         }
     }
 
+    public boolean isEmpty() {
+        return firstNode == null;
+    }
+    
     public T pop() {
         if (firstNode != null) {
             T value = firstNode.getValue();
