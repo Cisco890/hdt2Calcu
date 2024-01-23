@@ -1,6 +1,6 @@
 public class CustomStack<T> {
-    private Node<T> lastNode;
-    private Node<T> firstNode;
+    public Node<T> lastNode;
+    public Node<T> firstNode;
 
     public void push(T value) {
         if (lastNode == null) {
