@@ -2,11 +2,11 @@
   * Icalculadora
  
   * @param   no_hay
-  * @throws Interfaz creada por todos en la clase
+  * @throws doubleerfaz creada por todos en la clase
   */
-  interface Icalculadora{
-    int suma(int op1, int op2);
-    int resta(int op1, int op2);
-    int multiplicacion(int op1, int op2);
-    int division(int op1, int op2);
+  interface ICalculadora{
+    double suma(double op1, double op2);
+    double resta(double op1, double op2);
+    double multiplicacion(double op1, double op2);
+    double division(double op1, double op2);
   }

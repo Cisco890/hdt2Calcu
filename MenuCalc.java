@@ -1,15 +1,16 @@
 public class MenuCalc {
 
-    public static int operador(String LineaPostfix){
-        CustomStack<Integer> stack = new CustomStack<>();
+    public static double operador(String LineaPostfix){
+        CustomStack<Double> stack = new CustomStack<>();
         Calculador calc = new Calculador();
         for(int i = 0; i < LineaPostfix.length(); i++ ){
             char Simbolo = LineaPostfix.charAt(i);
             if( Character.isDigit(Simbolo)){
-                stack.push(Character.getNumericValue(Simbolo));
+                stack.push(Double.valueOf(Character.getNumericValue(Simbolo)));
+
             } else if( isOperator(Simbolo)){
-                int op2 = stack.pop();
-                int op1 = stack.pop();
+                double op2 = stack.pop();
+                double op1 = stack.pop();
                 switch (Simbolo) {
                     case '+':
                         stack.push(calc.suma(op1, op2));
@@ -24,8 +25,8 @@ public class MenuCalc {
                         stack.push(calc.division(op1, op2));
                         break;
                     default:
-                        System.out.println("La linea ingresada: " + LineaPostfix + " no a sido valida para calcular");
-                        return 0;
+                        System.out.print("La linea ingresada: " + LineaPostfix + " no a sido valida para calcular");
+                        return 0.0;
                 }
             } 
         }
@@ -43,8 +44,8 @@ public class MenuCalc {
 
     public static void main(String[] args) {
         String postfix = "23*5+"; // Este es un ejemplo de expresión en notación Postfix
-        int result = operador(postfix);
-        System.out.println("Resultado: " + result);
+        double result = operador(postfix);
+        System.out.print("Resultado: " + result);
     }
 
 }
