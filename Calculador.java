@@ -28,7 +28,7 @@
     public double dividir(double op1, double op2) {            //Indicamos metodo division
         double value;   
         if(op2 == 0){                                           //Instalamos un if para evitar que la maquina haga una division entre cero
-            throw new ArithmeticException("No podemos dividir entre cero, tonoto");
+            throw new ArithmeticException("No podemos dividir entre cero");
         } else {
             value = op1/op2;                                    //Igualamos el valor decimal "value" hacia la division de los operandos
             return value;                                       //Devolvemos "value"
