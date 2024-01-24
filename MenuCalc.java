@@ -18,16 +18,16 @@ public class MenuCalc {
                 double op1 = stack.pop().doubleValue();
                 switch (Simbolo) {                                                  //Cambiamos dependiendo del operador
                     case '+':           
-                        stack.push(calc.suma(op1, op2));
+                        stack.push(calc.sumar(op1, op2));
                         break;
                     case '-':
-                        stack.push(calc.resta(op1, op2));
+                        stack.push(calc.restar(op1, op2));
                         break;
                     case '*':
-                        stack.push(calc.multiplicacion(op1, op2));
+                        stack.push(calc.multiplicar(op1, op2));
                         break;
                     case '/':
-                        stack.push(calc.division(op1, op2));
+                        stack.push(calc.dividir(op1, op2));
                         break;
                     default:
                         System.out.println("La linea ingresada: " + LineaPostfix + " no a sido valida para calcular"); //Linea de postfix no bien escrita o logica incorrecta
