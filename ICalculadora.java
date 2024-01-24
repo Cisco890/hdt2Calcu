@@ -2,11 +2,11 @@
   * Icalculadora
  
   * @param   no_hay
-  * @throws Interfaz creada por todos en la clase
+  * @throws interfaz creada por todos en la clase
   */
-  interface Icalculadora{
-    int suma(int op1, int op2);
-    int resta(int op1, int op2);
-    int multiplicacion(int op1, int op2);
-    int division(int op1, int op2);
+  interface ICalculadora{
+    double sumar(double op1, double op2);            //Metodo suma para dos datos decimales
+    double restar(double op1, double op2);           //Metodo resta para dos datos decimales
+    double multiplicar(double op1, double op2);  //Metodo multuplicacion para dos datos decimales
+    double dividir(double op1, double op2);        //Metodo division para dos datos decimales
   }
