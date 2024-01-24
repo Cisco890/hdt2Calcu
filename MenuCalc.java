@@ -11,7 +11,7 @@
 
     public static double operador(String LineaPostfix){                             //Indica Metodo operador, aceptando una linea de palabras como postfix
         CustomStack<Number> stack = new CustomStack<>();                            //Creamos una pila de tipo Number, generico para cualquier numero
-        Calculador calc = new Calculador();                                         //Instanciamos a calculadora para acceder a sus metodos
+        Calculadora calc = new Calculadora();                                         //Instanciamos a calculadora para acceder a sus metodos
         for(int i = 0; i < LineaPostfix.length(); i++ ){                            //Recorremos la pila de numeros
             char Simbolo = LineaPostfix.charAt(i);                                  //Reconocemos cada cosa dentro de la linea como tipo "Character"
             if( Character.isDigit(Simbolo)){                                            //Revisamos si un dato Character es parte de la lista de numeros
