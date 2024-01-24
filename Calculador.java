@@ -4,7 +4,7 @@
   * @param   no_hay
   * @throws Calculador Logica basica de arimetica para los calculos de la aplicacion
   */
-public class Calculador implements ICalculadora {
+  public class Calculador implements ICalculadora {
 
     public double suma(double op1, double op2) {                //Indicamos metodo suma
         double value;                                           

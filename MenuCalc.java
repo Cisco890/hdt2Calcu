@@ -4,7 +4,10 @@
   * @param   no_hay
   * @throws Menu Implementador de logica de calculadora junto a la diferenciacion entre operandos y operadores
   */
-public class MenuCalc {                     
+  import java.io.BufferedReader;
+  import java.io.FileReader;
+  import java.io.IOException;
+  public class MenuCalc {                     
 
     public static double operador(String LineaPostfix){                             //Indica Metodo operador, aceptando una linea de palabras como postfix
         CustomStack<Number> stack = new CustomStack<>();                            //Creamos una pila de tipo Number, generico para cualquier numero
@@ -48,9 +51,19 @@ public class MenuCalc {
     }
 
     public static void main(String[] args) {
-        String postfix = "723*5+-"; 
-        double result = operador(postfix);
-        System.out.println("Resultado: " + result);
-    }
+        try {
+            String Archivo = "datos.txt";  // Nombre del archivo de texto
+            BufferedReader leer = new BufferedReader(new FileReader(Archivo));
 
+            String linea;
+            while ((linea = leer.readLine()) != null) {
+                double resultado = operador(linea);
+                System.out.println("Resultado para la operación \"" + linea + "\": " + resultado);
+            }
+
+            leer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
